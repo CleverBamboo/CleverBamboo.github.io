@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>2019年我总结的面试题 - 聪明的竹子博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="聪明的竹子博客"><meta name="msapplication-TileImage" content="https://i.loli.net/2019/12/05/7WUKpFrsMSxv9jB.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="聪明的竹子博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="说一下PromisePromise是什么？ Promise是一种用于解决异步问题的思路、方案或者对象方式。  Promise怎么用？ Promise是一个对象，所以先用new的方式创建一个，然后给它传一个函数作为参数，这个函数有两个参数，一个叫reolve,另一个叫reject、紧接着，就用then来进行调用"><meta property="og:type" content="blog"><meta property="og:title" content="2019年我总结的面试题"><meta property="og:url" content="http://example.com/2019/05/11/Web/2019%E5%B9%B4%E6%88%91%E6%80%BB%E7%BB%93%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/"><meta property="og:site_name" content="聪明的竹子博客"><meta property="og:description" content="说一下PromisePromise是什么？ Promise是一种用于解决异步问题的思路、方案或者对象方式。  Promise怎么用？ Promise是一个对象，所以先用new的方式创建一个，然后给它传一个函数作为参数，这个函数有两个参数，一个叫reolve,另一个叫reject、紧接着，就用then来进行调用"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1g4sku4rkkpj31180hs0xl.jpg"><meta property="article:published_time" content="2019-05-11T06:43:09.000Z"><meta property="article:modified_time" content="2021-07-10T03:23:26.997Z"><meta property="article:author" content="聪明的竹子"><meta property="article:tag" content="面试"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://ww3.sinaimg.cn/large/006tNc79gy1g4sku4rkkpj31180hs0xl.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2019/05/11/Web/2019%E5%B9%B4%E6%88%91%E6%80%BB%E7%BB%93%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/"},"headline":"2019年我总结的面试题","image":["http://ww3.sinaimg.cn/large/006tNc79gy1g4sku4rkkpj31180hs0xl.jpg"],"datePublished":"2019-05-11T06:43:09.000Z","dateModified":"2021-07-10T03:23:26.997Z","author":{"@type":"Person","name":"聪明的竹子"},"publisher":{"@type":"Organization","name":"聪明的竹子博客","logo":{"@type":"ImageObject","url":"https://i.loli.net/2019/12/05/7WUKpFrsMSxv9jB.png"}},"description":"说一下PromisePromise是什么？ Promise是一种用于解决异步问题的思路、方案或者对象方式。  Promise怎么用？ Promise是一个对象，所以先用new的方式创建一个，然后给它传一个函数作为参数，这个函数有两个参数，一个叫reolve,另一个叫reject、紧接着，就用then来进行调用"}</script><link rel="canonical" href="http://example.com/2019/05/11/Web/2019%E5%B9%B4%E6%88%91%E6%80%BB%E7%BB%93%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98/"><link rel="icon" href="https://i.loli.net/2019/12/05/7WUKpFrsMSxv9jB.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><script data-ad-client="ca-pub-4136865331374316" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://i.loli.net/2019/12/05/7WUKpFrsMSxv9jB.png" alt="聪明的竹子博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/CleverBamboo?tab=repositories"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="http://ww3.sinaimg.cn/large/006tNc79gy1g4sku4rkkpj31180hs0xl.jpg" alt="2019年我总结的面试题"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2019-05-11T06:43:09.000Z" title="2019/5/11下午2:43:09">2019-05-11</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-07-10T03:23:26.997Z" title="2021/7/10上午11:23:26">2021-07-10</time></span><span class="level-item"><a class="link-muted" href="/categories/Web/">Web</a></span><span class="level-item">an hour read (About 7556 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">2019年我总结的面试题</h1><div class="content"><h3 id="说一下Promise"><a href="#说一下Promise" class="headerlink" title="说一下Promise"></a>说一下Promise</h3><h4 id="Promise是什么？"><a href="#Promise是什么？" class="headerlink" title="Promise是什么？"></a>Promise是什么？</h4><ul>
+<li>Promise是一种用于解决异步问题的思路、方案或者对象方式。</li>
+</ul>
+<h4 id="Promise怎么用？"><a href="#Promise怎么用？" class="headerlink" title="Promise怎么用？"></a>Promise怎么用？</h4><ul>
+<li><p>Promise是一个对象，所以先用new的方式创建一个，然后给它传一个函数作为参数，这个函数有两个参数，一个叫reolve,另一个叫reject、<br>紧接着，就用then来进行调用</p>
+<span id="more"></span>
+<h4 id="Promise原理"><a href="#Promise原理" class="headerlink" title="Promise原理"></a>Promise原理</h4></li>
+<li><p>在Promise内部，有一个状态管理器的存在，有三种状态: pending、fulfilled、rejected</p>
+<p> (1) promise初始化状态为pending</p>
+<p> (2) 当前调用resolve(成功), 会由pending =&gt; fulfilled</p>
+<p> (3) 当调用reject(失败), 会由pending =&gt; rejected</p>
+</li>
+</ul>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><h4 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h4><p>协议、端口和域名不一致导致的跨域<br>跨域是因为浏览器需要遵守同源策略，发出的请求即使相应成功，也被浏览器拦截下来</p>
+<h4 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h4><p>同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互、这是一个用于隔离潜在恶意文件的重要安全机制、</p>
+<h4 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h4><p>如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。<a target="_blank" rel="noopener" href="https://celverbamboo.github.io/2019/08/19/%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2%E8%B7%A8%E7%AB%99%E6%94%BB%E5%87%BB-XSS%E5%92%8CCSRF/">转送门</a><br>1、 防御 XSS 攻击<br>XSS，即 Cross Site Script，中译是跨站脚本攻击。</p>
+<ul>
+<li>HttpOnly Cookie。</li>
+<li>输入过滤。</li>
+<li>服务器输出编码。</li>
+<li>WAF(Web Application Firewall)</li>
+</ul>
+<p>2、防御 CSRF 攻击<br>CSRF，即 Cross Site Request Forgery，中译是跨站请求伪造，是一种劫持受信任用户向服务器发送非预期请求的攻击方式。</p>
+<ul>
+<li>关键操作只接口POST请求，服务器拒绝GET请求</li>
+<li>验证码</li>
+<li>Referer Check</li>
+<li>Token验证 </li>
+</ul>
+<h4 id="跨域的解决方案"><a href="#跨域的解决方案" class="headerlink" title="跨域的解决方案"></a>跨域的解决方案</h4><p>1、通过jsonp跨域<br>2、document.domain + iframe跨域<br>3、location.hash + iframe<br>4、window.name + iframe跨域<br>5、postMessage跨域<br>6、跨域资源共享(CORS)<br>7、nginx代理跨域<br>8、nodejs中间代理跨域<br>9、WebSocket协议跨域</p>
+<h4 id="jsonp原理"><a href="#jsonp原理" class="headerlink" title="jsonp原理"></a>jsonp原理</h4><p>jsonp的核心则是动态添加 <strong>script</strong> 标签调用服务器提供的js脚本，允许用户传递一个callback参数给服务器，然后服务器返回数据时会将这个callback参数作为函数名老包裹JSON数据，这样客户端就可以随意定制自己的函数来自动处理返回数据了</p>
+<ul>
+<li>仅支持GET方法</li>
+</ul>
+<h3 id="如何进行网站性能优化"><a href="#如何进行网站性能优化" class="headerlink" title="如何进行网站性能优化"></a>如何进行网站性能优化</h3><p>1、Content方面</p>
+<ul>
+<li>减少HTTP请求：合并文件、CSS精灵、inline image</li>
+<li>减少DNS查询： DNS查询完之前浏览器不能从这个主机下载任何文件、方法：DNS缓存、讲资源分布到恰当的数量的主机名，平衡并行下载和DNS查询</li>
+<li>避免重定向 ： 多余的中间访问</li>
+<li>使用AJAX缓存，真相跟 HTTP缓存没有什么区别。<a target="_blank" rel="noopener" href="http://jinyanhuan.github.io/2015/12/23/ajax-caching/">相关链接</a></li>
+<li>非必须组件延迟加载</li>
+<li>未来所需组件预加载</li>
+<li>减少DOM元素数量</li>
+<li>将资源放到不同的域下面：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量</li>
+<li>减少iframe数量</li>
+<li>不要404</li>
+</ul>
+<p>2、Server方面</p>
+<ul>
+<li>使用CDN</li>
+<li>添加Expires或者Cache-Control： 当Cache-Control和Expires同时存在时，Cache-Control会覆盖Expires。<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000014669345">相关链接</a></li>
+<li>使用Gzip压缩</li>
+<li>配置Etag</li>
+<li>Flush Buffer Early</li>
+<li>Ajax使用GET进行请求</li>
+<li>避免空src的img标签</li>
+</ul>
+<p>3、Cookie方面</p>
+<ul>
+<li>减小Cookie</li>
+<li>引入资源的域名不要包含cookie</li>
+</ul>
+<p>4、CSS方面</p>
+<ul>
+<li>将样式表放到顶部</li>
+<li>不要使用CSS表达式</li>
+<li>不使用@import</li>
+<li>不使用IE的Filter</li>
+</ul>
+<p>5、JavaScript</p>
+<ul>
+<li>将脚本放到页面的底部</li>
+<li>将JavaScript和CSS从外部引入</li>
+<li>压缩JavaScript和CSS</li>
+<li>删除不需要的脚本</li>
+<li>减少DOM的查询</li>
+<li>合理设计事件监听器</li>
+</ul>
+<p>6、图片方面</p>
+<ol>
+<li>优化图片： 根据实际颜色需要选择色深、压缩</li>
+<li>优化CSS精灵</li>
+<li>不要在HTML中拉伸图片</li>
+<li>保证favicon、ico小并且可缓存</li>
+</ol>
+<p>7、移动方面</p>
+<ul>
+<li>保证组件小于25K</li>
+<li>Pack Components into a Multipart Document</li>
+</ul>
+<h3 id="从浏览器地址栏输入url到显示页面的步骤-以HTTP为例"><a href="#从浏览器地址栏输入url到显示页面的步骤-以HTTP为例" class="headerlink" title="从浏览器地址栏输入url到显示页面的步骤(以HTTP为例)"></a>从浏览器地址栏输入url到显示页面的步骤(以HTTP为例)</h3><p>大概流程</p>
+<ul>
+<li>URL输入</li>
+<li>DNS解析</li>
+<li>TCP连接</li>
+<li>发送HTTP请求</li>
+<li>服务器处理请求</li>
+<li>服务器响应请求</li>
+<li>浏览器解析渲染页面</li>
+<li>连接结束</li>
+</ul>
+<p>1、在浏览器数地址栏输入URL</p>
+<p>2、浏览器查看<strong>缓存</strong>，如果请求资源在缓存中并且新鲜(即是有没有过期的意思)，跳转到转码步骤</p>
+<ul>
+<li>如果资源未缓存，发起新请求</li>
+<li>如果已缓存，检验是否足够新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证。</li>
+<li>检验新鲜通常有两个HTTP头进行控制 <code>Expires</code> 和 <code>Cache-Control</code><ul>
+<li>HTTP1.0提供Expires，值为一个绝对值表示    </li>
+<li>HTTP1.1增加了Cache-Control : max-age=，值为以秒为单位的最大新鲜时间</li>
+</ul>
+</li>
+</ul>
+<p>3、浏览器<strong>解析URL</strong>获取协议，主机，端口，path     </p>
+<p>4、浏览器<strong>组装一个HTTP(GET)请求报文</strong></p>
+<p>5、浏览器<strong>获取主机ip地址</strong>，过程如下：</p>
+<ul>
+<li>浏览器缓存</li>
+<li>本机缓存</li>
+<li>hosts文件</li>
+<li>路由器缓存</li>
+<li>ISP DNS缓存</li>
+<li>DNS递归查询(可能存在负载均衡导致每次IP不一样)</li>
+</ul>
+<p>6、<strong>打开一个sokcet与目标地址端口建立TCP链接，</strong> 三次握手如下：</p>
+<ul>
+<li>客户端发送一个TCP的<strong>SYN=1，Seq=X</strong>的包到服务器端口</li>
+<li>服务器发送<strong>SYN=1，ACK=X+1，Seq=Y</strong>的响应包  </li>
+<li>客户端发送<strong>ACK=Y+1，Seq=Z</strong></li>
+</ul>
+<p>7、TCP链接建立后<strong>发送HTTP请求</strong></p>
+<p>8、服务器接受请求并解析，将请求转发到服务程序，如虚拟机使用HTTP Host头部判断请求的服务程序</p>
+<p>9、服务器检查<strong>HTTP请求头是否包含缓存验证信息</strong>如果验证缓存新鲜，返回<strong>304</strong>等对应状态码</p>
+<p>10、处理程序读取完整请求并准备HTTP响应，可能需要查询数据库等操作</p>
+<p>11、服务器将<strong>响应报文通过TCP链接发送回浏览器</strong></p>
+<p>12、浏览器接受HTTP响应，然后根据情况选择<strong>关闭TCP连接或者保留重用，关闭TCP连接的四次握手如下：</strong></p>
+<ul>
+<li>主动发送<strong>Fin=1，Ack=Z，Seq=X报文</strong></li>
+<li>被动发送<strong>ACK=X+1，Seq=Z报文</strong></li>
+<li>被动发送<strong>Fin=1，ACK=X，Seq=Y报文</strong></li>
+<li>主动发送<strong>ACK=Y，Seq=X报文</strong></li>
+</ul>
+<p>13、浏览器检查响应状态码：是否为1XX、3XX、4XX、5XX，这些情况处理与2XX不同</p>
+<p>14、如果资源可缓存，<strong>进行缓存</strong>   </p>
+<p>15、对响应进行<strong>解码</strong>(例如gzip压缩)</p>
+<p>16、根据资源类型决定如何处理(假设资源为HTML文档)</p>
+<p>17、<strong>解析HTML文档、构件DOM树，下载资源，构造CSSOM树，执行js脚本</strong>，这些操作没有严格的先后顺序，以下分别解释</p>
+<p>18、<strong>构建DOM树：</strong></p>
+<ul>
+<li>Tokenizing： 根据HTML规范将字符流解析为标记</li>
+<li>Lexing：词法分析将标记转换为对象并定义属性和规则</li>
+<li>DOM construction： 根据HTML标记关系将对象组成DOM树</li>
+</ul>
+<p>19、解析过程中遇到图片、样式表、js文件，<strong>启动下载</strong></p>
+<p>20、<strong>构建CSSOM树</strong></p>
+<ul>
+<li><strong>Tokenizing</strong>： 字符流转换为标记流</li>
+<li><strong>Node</strong>：根据标记创建节点</li>
+<li><strong>CSSOM</strong>：节点创建CSSOM树</li>
+</ul>
+<p>21、<strong>根据DOM树和CSSOM树构建渲染树</strong>:</p>
+<ul>
+<li>从DOM树的根节点遍历所有<strong>可见节点</strong>，不可见节点包括：1）<code>script，meta</code>这样本身不可见的标签。2)被CSS隐藏的节点，入<code>display:none</code></li>
+<li>对每一个可节点，找到恰当的CSSOM规则并应用</li>
+<li>发布可视节点的内容和计算样式</li>
+</ul>
+<p>22、<strong>js解析如下</strong></p>
+<ul>
+<li>浏览器创建Document对象并解析HTML，将解析到的元素和文本节点添加到文档中，此时<strong>document.readystate为loading</strong></li>
+<li>HTML解析器遇到<strong>没有async和defer的script时</strong>，将他们添加到文档中，然后执行行内或者外部脚本。这些脚本同步执行，并且在脚本下载和执行时解析器会暂停。这样就可以用document.write()把文本插入到输入流中。<strong>同步脚本经常定义为函数和注册事件处理事件，他们可以遍历和操作script和他们之前的文档内容。</strong></li>
+<li>当解析器遇到设置了<strong>async属性</strong>的script时，开始下载脚本并继续解析文档。脚本在它<strong>下载完成后尽快执行</strong>，但是<strong>解析器不会停下来等它下载</strong>。**异步脚本禁止使用document.write()**，它们可以访问自己script和之前的文档元素</li>
+<li>所有<strong>deter</strong>脚本会<strong>按照在文档上出现的顺序执行</strong>，延迟脚本<strong>能访问完整文档时</strong>，禁止使用document.write()</li>
+<li>浏览器<strong>在Document对象上触发DOMContentLoaded事件</strong></li>
+<li>此时文档完成解析完成，浏览器可能还在等待如图片等内容加载，等这些<strong>内容完成载入并且所有异步脚本完成和执行</strong>，document.readState变为complete,window触发load事件</li>
+</ul>
+<p>23、<strong>显示页面</strong>(HTML解析过程中会逐步显示页面)</p>
+<h3 id="移动端开发自适应页面如何做？"><a href="#移动端开发自适应页面如何做？" class="headerlink" title="移动端开发自适应页面如何做？"></a>移动端开发自适应页面如何做？</h3><p>1、通过meta标签设置viewport，移动端的理想适口。</p>
+<ul>
+<li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt;</code></li>
+</ul>
+<p>2、设置rem单位来进行适配、加上Flex布局、百分比布局</p>
+<p>3、其它方案，响应式适配、vw+rem</p>
+<h3 id="rem原理"><a href="#rem原理" class="headerlink" title="rem原理"></a>rem原理</h3><ul>
+<li>rem是是指相对于根元素的字体大小的单位</li>
+<li>比如设置html font-size=100px;那么1rem=100px;之后的所有元素都可以用这个基准值来设置大小；</li>
+<li><strong>rem作用于非根元素时，相对于根元素字体大小；rem作用于根元素字体大小时，相对于其出初始字体大小——MDN</strong></li>
+</ul>
+<h3 id="说一下this。-相关链接"><a href="#说一下this。-相关链接" class="headerlink" title="说一下this。 相关链接"></a>说一下this。 <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000008400124">相关链接</a></h3><p>与我们常见的很多语言不同，JavaScript 函数中的 this 指向并不是在函数定义的时候确定的，而是在调用的时候确定的。换句话说，<strong>函数的调用方式决定了 this 指向。</strong></p>
+<ul>
+<li>直接调用<br>直接调用，就是通过 函数名(…) 这种方式调用</li>
+<li>方法调用<br>方法调用是指通过对象来调用其方法函数，它是 <strong>对象.方法函数(…)</strong> 这样的调用形式</li>
+<li>new关键字调用</li>
+<li>通过 bind() 将函数绑定到对象之后再进行调用</li>
+<li>通过 call()、apply() 进行调用</li>
+</ul>
+<h3 id="箭头函数的特点"><a href="#箭头函数的特点" class="headerlink" title="箭头函数的特点?"></a>箭头函数的特点?</h3><p>官方解释：箭头函数表达式的语法比函数表达式更简洁，并且没有自己的<strong>this，arguments，super</strong>或 <strong>new.target。</strong></p>
+<ul>
+<li><p>引用箭头函数有两个方面的作用：更简短函数和并且不绑定<strong>this</strong></p>
+</li>
+<li><p>箭头函数不会创建this，它只会从自己的作用域链上一层继承this。</p>
+</li>
+<li><p>简而言之，箭头函数，永远指向当前调用的对象</p>
+</li>
+</ul>
+<h3 id="和-的区别？"><a href="#和-的区别？" class="headerlink" title="== 和 === 的区别？"></a>== 和 === 的区别？</h3><ul>
+<li>== 会进行隐式转换，比较前将两个被比较的值转换为相同类型。然后比较两个值是否相等</li>
+<li>=== 不进行隐式转换，会比较类型和值</li>
+</ul>
+<h3 id="CSS选择器优先级"><a href="#CSS选择器优先级" class="headerlink" title="CSS选择器优先级"></a>CSS选择器优先级</h3><ul>
+<li>每个选择器都有权值，权值越大越优先</li>
+<li>继承的样式优先级低于自身制定样式</li>
+<li>!important优先级最高，js也无法修改</li>
+<li>权值相同的时候，靠近元素的样式优先级搞，顺序为内联样式 &gt; 内部样式表 &gt; 外部样式表</li>
+</ul>
+<h3 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h3><h4 id="什么是BFC"><a href="#什么是BFC" class="headerlink" title="什么是BFC"></a>什么是BFC</h4><p>BFC就是”块级格式化上下文”的意思，创建了BFC的元素就是一个独立的盒子，不过只有Block-level Box 可以参与创建BFC，它规定了内部的Block-level Box如何布局，并且与这个独立盒子里的布局不受外部影响，当然它不会影响到外面的元素。</p>
+<h4 id="BFC特性："><a href="#BFC特性：" class="headerlink" title="BFC特性："></a>BFC特性：</h4><ul>
+<li>内部的Box会在垂直方向，从顶部开始一个接一个地放置</li>
+<li>Box垂直方向的距离由margin决定。<strong>属于同一个BFC的两个相邻Box的margin会发生叠加</strong></li>
+<li>每个元素的margin box的左边，与包含的 border box 的左边相接触（对于从左往右的格式化，否则相反）。即使存在浮动也是如此。</li>
+<li>BFC的区域不会与float box叠加</li>
+<li>BFC就是页面的一个隔离的独立容器，容器里面的子元素不会受影响到外面的元素，反之亦然。</li>
+<li>计算BFC的高度时，浮动元素也参与计算</li>
+</ul>
+<h4 id="如何触发BFC"><a href="#如何触发BFC" class="headerlink" title="如何触发BFC"></a>如何触发BFC</h4><ul>
+<li>根元素或包含根元素的元素</li>
+<li>浮动元素,float 除了 none 以外</li>
+<li>绝对定位元素, position 为 absolute、fixed</li>
+<li>display 为 inline-block、table-cell、table-caption、flow-root</li>
+<li>overflow 值不为 visible 的元素</li>
+<li>弹性元素（display 为 flex 或 inline-flex 元素的直接子元素）</li>
+<li>网格元素 (display 为 grid 或 inline-grid 元素的直接子元素)</li>
+<li>多列容器（元素的 column-count 或 column-width 不为 auto，包括 column-count 为 1）</li>
+<li>column-span 为 all 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中（标准变更，Chrome bug）</li>
+</ul>
+<h3 id="EventBus如何实现？相关链接"><a href="#EventBus如何实现？相关链接" class="headerlink" title="EventBus如何实现？相关链接"></a>EventBus如何实现？<a target="_blank" rel="noopener" href="https://www.google.com/search?ei=lxMwXbq1I9GtoATPhYiwCQ&q=%E5%B0%8F%E7%A8%8B%E5%BA%8FEventBus&oq=%E5%B0%8F%E7%A8%8B%E5%BA%8FEventBus&gs_l=psy-ab.3..0i7i30.2995.4118..4267...0.0..0.175.1471.2j10......0....1..gws-wiz.......35i304i39j0i13j0.n6-ujhtDNPI&ved=&uact=5">相关链接</a></h3><p>利用发布/订阅模式，发布/订阅模式由一个发布者、多个订阅者以及一个调度中心所组成。订阅者们先在调度中心订阅某一事件并注册相应的回调函数，当某一个时刻发布者发布了一个事件,调度中心取出订阅了该事件的订阅者们所注册的回调函数来执行。</p>
+<p>在发布/订阅模式中，订阅者和发布者并不需要关心对方的状态，订阅者只管订阅事件并注册回调、发布者只管发布事件，其余一切交给调度中心来调度，从而实现解耦。</p>
+<h3 id="Vue组件之间的通信"><a href="#Vue组件之间的通信" class="headerlink" title="Vue组件之间的通信"></a>Vue组件之间的通信</h3><ul>
+<li><p>父传子: props、attr、ref调用函数</p>
+</li>
+<li><p>子传父: emit、listeners</p>
+</li>
+<li><p>兄弟组件通信: vuex、eventBus</p>
+</li>
+</ul>
+<h3 id="Vue双向绑定的原理"><a href="#Vue双向绑定的原理" class="headerlink" title="Vue双向绑定的原理"></a>Vue双向绑定的原理</h3><p>Vue是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter、getter，在数据变动时发布消息给订阅者，触发响应的监听回调。</p>
+<p>具体步骤：</p>
+<p>第一步：需要 Observe 的数据对象进行递归遍历，包括子属性对象的属性，都加上 setter 和 getter。这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到数据变化。</p>
+<p>第二步：Compile 解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图</p>
+<p>第三步：Watcher 订阅者是 Observe 和 Compile 之间通信的桥梁，主要的事情是：</p>
+<p>1、在自身实例化时往属性订阅器(dep)里面添加自己</p>
+<p>2、自身必须有一个update()</p>
+<p>3、待属性变动dep.notify()通知时，调用自身的 update() 方法，并触发 Compile 中绑定回调，则功成身退。</p>
+<p>总结：MVVM作为数据绑定的入口，整合 Observe、Compile 和 Watcher 三者，通过 Observe 来监听自己的 Model 数据变化。<br>通过 Compile 来解析编译模板指令，最终利用 Watcher 搭起 Observe 和 Compile 之间的通信桥梁；<br>达到数据变化 -&gt; 视图更新; 视图交互(input) -&gt; 数据 Model 变更的双向绑定效果。</p>
+<h3 id="Vue-Computed的实现原理和缓存原理"><a href="#Vue-Computed的实现原理和缓存原理" class="headerlink" title="Vue Computed的实现原理和缓存原理"></a>Vue Computed的实现原理和缓存原理</h3><p>实现原理：遍历computed对象的key，调用<strong>defineComputed</strong>函数，给对应的key添加getter和setter。同时给每个对象添加一个watcher，通过这个watch来进行派发通知，更新视图</p>
+<p>缓存原理：缓存就是在获取 getter 数据的，判断是否值相等，相等的话就直接返回，不再进行更新视图</p>
+<h3 id="Vue-watch-和-computed的区别"><a href="#Vue-watch-和-computed的区别" class="headerlink" title="Vue watch 和 computed的区别"></a>Vue watch 和 computed的区别</h3><p>watch 主要监控数据的变化，根据变化自定义执行相应的操作<br>computed 在计算获得数据，在getter之后会进行缓存，只有依赖的属性值变化后，才会发生变化，否则从缓存获取数据</p>
+<h3 id="MVVM框架是什么？它和其它框架（Jquery）的区别是什么？哪些场景适合？"><a href="#MVVM框架是什么？它和其它框架（Jquery）的区别是什么？哪些场景适合？" class="headerlink" title="MVVM框架是什么？它和其它框架（Jquery）的区别是什么？哪些场景适合？"></a>MVVM框架是什么？它和其它框架（Jquery）的区别是什么？哪些场景适合？</h3><p>MVVM分为Model、View、ViewModel三者</p>
+<ul>
+<li><strong>Model</strong> 代表数据模型，数据和业务逻辑都在Model层中定义</li>
+<li><strong>View</strong> 代表UI视图，负责数据展示</li>
+<li><strong>ViewModel</strong> 负责监听 <strong>Model</strong> 中数据的改变并且控制视图更新，处理用户交互操作：</li>
+</ul>
+<p><strong>Model</strong> 和 <strong>View</strong> 并无直接关联，而是通过 <strong>ViewModel</strong> 来进行联系的， <strong>Model</strong> 和 <strong>ViewModel</strong> 之间有着双向数据绑定的联系。因此当 <strong>Model</strong> 中的数据改变时会触发 <strong>View</strong> 层的刷新，<strong>View</strong> 中由于用户交互操作而改变的数据也会在 <strong>Model</strong> 中同步</p>
+<p>区别：这种模式实现了 Model 和 View的数据自动同步，因此开发时这需要要专注对数据的维护操作即可，而不需要自己操作dom<br>场景：数据操作比较多的场景，更加便捷</p>
+<p>面试回答: jQuery主要简化了DOM的操作，是一个JS函数库。Vue，主要实现了MVVM的模式框架，通过数据驱动视图的变化，不需要自己操作DOM，增加了开发效率，并实现了组件化的思想，增加项目的可维护性。</p>
+<h3 id="Vue-mixin-的原理"><a href="#Vue-mixin-的原理" class="headerlink" title="Vue mixin 的原理"></a>Vue mixin 的原理</h3><p>主要思路合并对象，遍历循环mixin对象，然后找到对应的钩子函数进行合并。</p>
+<h3 id="nextTick-实现原理"><a href="#nextTick-实现原理" class="headerlink" title="nextTick 实现原理"></a>nextTick 实现原理</h3><p>概念补充:<br>JS，是单线程的，利用JS的事件循环</p>
+<p>事件循环大致分为以下几个步骤:</p>
+<p>(1) 所有同步任务都在主线程上执行，形成一个执行栈(execution context stack)</p>
+<p>(2) 主线程之外，还存在一个”任务队列”(task queue)。只要异步任务有了运行结果，就在”任务队列”之中放置一个事件。</p>
+<p>(3) 一旦”执行栈”中的所有同步任务执行完毕，系统就会读取”任务队列”，看看里面有哪些事件。哪些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。</p>
+<p>(4) 主线程不断重复上面的第三步</p>
+<h4 id="宏任务-macro-task-和-微任务-micro-task"><a href="#宏任务-macro-task-和-微任务-micro-task" class="headerlink" title="宏任务(macro task) 和 微任务(micro task)"></a>宏任务(macro task) 和 微任务(micro task)</h4><p> 先执行宏观任务，再执行微观任务(是对异步 处理的 优先级)</p>
+<ul>
+<li>宏观任务：setTimeout、MessageChannel、postMessage、setImmediate…</li>
+<li>微观任务：MutationObsever、Promise.then</li>
+</ul>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (macroTask <span class="keyword">of</span> macroTaskQueue) &#123;</span><br><span class="line">    <span class="comment">// 1. Handle current MACRO-TASK</span></span><br><span class="line">    handleMacroTask();</span><br><span class="line">      </span><br><span class="line">    <span class="comment">// 2. Handle all MICRO-TASK</span></span><br><span class="line">    <span class="keyword">for</span> (microTask <span class="keyword">of</span> microTaskQueue) &#123;</span><br><span class="line">        handleMicroTask(microTask);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>nextTick原理：</p>
+<ul>
+<li><p>会有一个callbacks数组，接受nextTick的回调函数,push进去</p>
+</li>
+<li><p>首先判断是否支持Promise，支持则利用的Promise.then进行调用遍历调用callbacks数组</p>
+</li>
+<li><p>判断是否支持 MutationObserver，支持则利用 MutationObserver 遍历调用callbacks数组</p>
+</li>
+<li><p>判断是否支持 setImmediate，支持则利用 setImmediate 遍历调用callbacks数组</p>
+</li>
+<li><p>都不支持，则利用setTimeout进行遍历调用 callbacks数组</p>
+</li>
+</ul>
+<p>面试回答: 把传入的回调函数压入 一个 callbacks 数组，判断当前浏览器支持宏任务还是微任务函数，在对应的函数里面进行回调 遍历callbacks 数组，然后执行相应的函数。</p>
+<h3 id="什么是虚拟-dom-？"><a href="#什么是虚拟-dom-？" class="headerlink" title="什么是虚拟 dom ？"></a>什么是虚拟 dom ？</h3><p>VNode是对真实 DOM 的一种抽象描述，它的核心定义无非就几个关键属性，标签名、数据、子节点、键值等，其它属性都是用来扩展VNode的灵活性以及实现一些特殊 feature的。</p>
+<p>Virtual DOM 除了它的数据结构的定义，映射到真实的 DOM 实际上要经历 VNode的 create、diff、 patch等过程。</p>
+<h3 id="说一下Vuex"><a href="#说一下Vuex" class="headerlink" title="说一下Vuex"></a>说一下Vuex</h3><h4 id="vuex有哪几种属性？"><a href="#vuex有哪几种属性？" class="headerlink" title="vuex有哪几种属性？"></a>vuex有哪几种属性？</h4><p>vuex具有五种属性: state、getter、mutation、action、module</p>
+<h4 id="vuex的state特性是？"><a href="#vuex的state特性是？" class="headerlink" title="vuex的state特性是？"></a>vuex的state特性是？</h4><ul>
+<li><p>vuex就是一个仓库，仓库里面放很多对象。state就是数据存放地，对应于一般vue对象里面的data</p>
+</li>
+<li><p>state里面存放的数据是响应式的</p>
+</li>
+</ul>
+<h4 id="vuex的getter特性是？"><a href="#vuex的getter特性是？" class="headerlink" title="vuex的getter特性是？"></a>vuex的getter特性是？</h4><ul>
+<li><p>getters可以对state进行计算操作</p>
+</li>
+<li><p>可以在多组件之间复用</p>
+</li>
+</ul>
+<h4 id="vuex的mutation特性是？"><a href="#vuex的mutation特性是？" class="headerlink" title="vuex的mutation特性是？"></a>vuex的mutation特性是？</h4><ul>
+<li><p>action类似于mutation</p>
+</li>
+<li><p>action提价的是mutation，而是不是直接变更状态</p>
+</li>
+<li><p>action可以包含任何异步操作</p>
+</li>
+</ul>
+<h4 id="不用vuex会带来什么问题？"><a href="#不用vuex会带来什么问题？" class="headerlink" title="不用vuex会带来什么问题？"></a>不用vuex会带来什么问题？</h4><ul>
+<li><p>可维护性会下降，你要想修改数据，你得维护三个地方</p>
+</li>
+<li><p>可读性下降，因为一个组件里的数据，你根本看不出来是从哪来的</p>
+</li>
+<li><p>增加耦合，大量的上传派发，会让耦合性大大的增加，本来Vue用Component就是为了减少耦合，现在这么用，和组件化的初衷相背。</p>
+</li>
+</ul>
+<h3 id="请详细说下你对vue生命周期的理解？"><a href="#请详细说下你对vue生命周期的理解？" class="headerlink" title="请详细说下你对vue生命周期的理解？"></a>请详细说下你对vue生命周期的理解？</h3><p>总共分为8个阶段<strong>创建前/后,载入前/后,更新前/后,销毁前/后</strong></p>
+<p>创建前/后: 在beforeCreated阶段，vue实例的挂载元素$el和数据对象data都为undefined，还未初始化。在created阶段，vue实例的数据对象data有了，$el还没有。</p>
+<p>载入前/后: 在beforeMount阶段，vue实例的$el和data都初始化了，但还是挂载之前为虚拟的dom节点，data.message还未替换。在mounted阶段，vue实例挂载完成，data.message成功渲染。</p>
+<p>更新前/后: 当data变化时，会触发beforeUpdate和updated方法。</p>
+<p>销毁前/后: 在执行destroy方法后，对data的改变不会触发周期函数，说明此时vue实例已经解除了事件监听以及和dom的绑定，但是dom结构依然存在</p>
+<h3 id="请说下封装-vue-组件的过程？"><a href="#请说下封装-vue-组件的过程？" class="headerlink" title="请说下封装 vue 组件的过程？"></a>请说下封装 vue 组件的过程？</h3><p>首先，组件可以提升整个项目的开发效率。能够把页面抽象成多个相对独立的模快，解决了我们传统项目开发：效率低、难维护、复用性等问题。</p>
+<p>然后，使用Vue.extend方法创建一个组件，然后使用Vue.component方法注册组件。子组件需要数据，可以在props中接受定义。而子组件修改好数据后，想把数据递给父组件。可以采用emit方法。</p>
+<h3 id="说一下keep-live组件的原理"><a href="#说一下keep-live组件的原理" class="headerlink" title="说一下keep-live组件的原理"></a>说一下keep-live组件的原理</h3><h4 id="keep-alive是什么"><a href="#keep-alive是什么" class="headerlink" title="keep-alive是什么"></a>keep-alive是什么</h4><p>keep-alive是一个抽象组件：它自身不会渲染一个DOM元素，也不会出现在父组件链中；使用keep-alive包裹动态组件时，会缓存不活动的组件实例，而不是销毁他们。</p>
+<h4 id="keep-alive运行原理"><a href="#keep-alive运行原理" class="headerlink" title="keep-alive运行原理"></a>keep-alive运行原理</h4><ul>
+<li><p>获取keep-alive包裹的第一个子组件对象以其组件名</p>
+</li>
+<li><p>根据设定的黑白名单(如果有)进行条件匹配，决定是否缓存。不匹配，直接返回组件实例(VNode)</p>
+</li>
+<li><p>根据组件ID和tag生成缓存Key，并在缓存对象中查找是否已缓存过该组件实例。如果存在，直接取出缓存值并更新该 key 在 this.keys 中的位置（更新key的位置是实现LRU置换策略的关键），否则执行第四步</p>
+</li>
+<li><p>在 this.cache 对象中存储该组件实例并保存 key 值，之后检查缓存的实例数量是否超过 max 的设置值，超过则根据LRU置换策略删除最近最久未使用的实例（即是下标为0的那个key）。</p>
+</li>
+<li><p>最后并且很重要，将该组件实例的 keepAlive 属性值设置为 true </p>
+</li>
+</ul>
+<p>面试回答: 根据设定的黑白名单(如果有)进行条件匹配，决定是否缓存。不匹配，直接返回组件实例(VNode)，如果匹配的话，存储到一个对象里面，并根据组件ID和生成缓存key，并且标识该组件已缓存。然后如果下次再匹配的话，就会通过对应的缓存Key从内存里面获取对应的Vue实例。</p>
+<h3 id="Proxy-和-Object-defineProperty-的优劣？"><a href="#Proxy-和-Object-defineProperty-的优劣？" class="headerlink" title="Proxy 和 Object.defineProperty 的优劣？"></a>Proxy 和 Object.defineProperty 的优劣？</h3><ul>
+<li><p>Proxy有多达13种拦截方法，不限于apply、ownKeys、deleteProperty、has等等是</p>
+</li>
+<li><p>*Object.defineProperty()**不具备的</p>
+</li>
+<li><p>Proxy返回的是一个新对象，我们可以只操作新的对象达到目的，而 <strong>Object.defineProperty</strong> 只能遍历对象属性直接修改</p>
+</li>
+<li><p>Proxy作为新标准将受到浏览器厂商重点持续的性能优化，也就是传说中的新标准的性能红利</p>
+</li>
+<li><p>当然,Proxy的劣势就是兼容性问题,而且无法用polyfill磨平,因此Vue的作者才声明需要等到下个大版本(3.0)才能用Proxy重写。</p>
+</li>
+</ul>
+<h3 id="聊一聊常见的浏览器端数据存储方案"><a href="#聊一聊常见的浏览器端数据存储方案" class="headerlink" title="聊一聊常见的浏览器端数据存储方案"></a>聊一聊常见的浏览器端数据存储方案</h3><p>数据存储方案：</p>
+<ul>
+<li>Cookie</li>
+<li>Web存储(localStorage和sessionStorage)</li>
+<li>IndexedDB</li>
+</ul>
+<p>大概说一下Cookie和localStorage、sessionStorage的功能特性。问到的话，Cookie的缺点就是，存储量少、数据大影响性能、只能储存字符串、安全性问题、需要检查Cookie能否使用</p>
+<h3 id="Flexible布局方案的原理"><a href="#Flexible布局方案的原理" class="headerlink" title="Flexible布局方案的原理"></a>Flexible布局方案的原理</h3><ul>
+<li>获取document的适口宽度 除以 10</li>
+<li>得出 1rem = viewWidth / 10</li>
+<li>然后设置 html的font-size为 rem + ‘px’</li>
+</ul>
+<h3 id="为什么会有深拷贝和浅拷贝？日常开发中如何使用？，如何实现一个深拷贝？"><a href="#为什么会有深拷贝和浅拷贝？日常开发中如何使用？，如何实现一个深拷贝？" class="headerlink" title="为什么会有深拷贝和浅拷贝？日常开发中如何使用？，如何实现一个深拷贝？"></a>为什么会有深拷贝和浅拷贝？日常开发中如何使用？，如何实现一个深拷贝？</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc </span>深拷贝，支持常见类型</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;Any&#125;</span> <span class="variable">values</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;Any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">values</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> copy;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Handle the 3 simple types, and null or undefined</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">null</span> == values || <span class="string">&quot;object&quot;</span> != <span class="keyword">typeof</span> values) <span class="keyword">return</span> values;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Handle Date</span></span><br><span class="line">    <span class="keyword">if</span> (values <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">        copy = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        copy.setTime(values.getTime());</span><br><span class="line">        <span class="keyword">return</span> copy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Handle Array</span></span><br><span class="line">    <span class="keyword">if</span> (values <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</span><br><span class="line">        copy = [];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = values.length; i &lt; len; i++) &#123;</span><br><span class="line">            copy[i] = deepClone(values[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> copy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Handle Object</span></span><br><span class="line">    <span class="keyword">if</span> (values <span class="keyword">instanceof</span> <span class="built_in">Object</span>) &#123;</span><br><span class="line">        copy = &#123;&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> attr <span class="keyword">in</span> values) &#123;</span><br><span class="line">            <span class="keyword">if</span> (values.hasOwnProperty(attr)) copy[attr] = deepClone(values[attr]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> copy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;Unable to copy values! Its type isn&#x27;t supported.&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果是一个数组，就声明一个数据组，然后循环遍历，递归赋值。<br>如果是一个对象，就声明一个对象，然后判断是否子元素,递归赋值</p>
+<p>除了递归，我们还可以借用JSON对象的parse和stringify</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> _obj = <span class="built_in">JSON</span>.stringify(obj),</span><br><span class="line">    objClone = <span class="built_in">JSON</span>.parse(_obj);</span><br><span class="line">    <span class="keyword">return</span> objClone</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+<h3 id="后台管理系统权限路由实现"><a href="#后台管理系统权限路由实现" class="headerlink" title="后台管理系统权限路由实现?"></a>后台管理系统权限路由实现?</h3><p>权限控制的主体思路，前端会有一份路由表，它表示了每个路由的访问权限。当用户登录之后，通过<strong>token</strong>获取用户的<strong>role</strong>，动态根据用户的<strong>role</strong>算出其对应有的权限的路由，通过<strong>router.addRoutes</strong>动态挂载路由。</p>
+<h3 id="vue-组件-data-为什么必须是函数？"><a href="#vue-组件-data-为什么必须是函数？" class="headerlink" title="vue 组件 data 为什么必须是函数？"></a>vue 组件 data 为什么必须是函数？</h3><p>如果是对象的话，每一个vue组件都是一个vue实例，通过new Vue()实例化，引用同一个对象，如果data直接是一个对象的话，那么一旦修改其中一个组件的数据，其他组件相同数据就会被改变。<br>而data是函数的话，每个vue组件的data都因为函数有了自己的作用域，互不干扰。</p>
+<h3 id="webpack-是什么？为什么使用webpack-WebPack和Grunt以及Gulp相比有什么特性"><a href="#webpack-是什么？为什么使用webpack-WebPack和Grunt以及Gulp相比有什么特性" class="headerlink" title="webpack 是什么？为什么使用webpack? WebPack和Grunt以及Gulp相比有什么特性"></a>webpack 是什么？为什么使用webpack? WebPack和Grunt以及Gulp相比有什么特性</h3><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。</p>
+<p>因为通过webpack把一些繁琐的操作的，比如CSS添加对应的前缀，通过引入模快的方式来进行操作。</p>
+<h3 id="现在开发如何解决浏览器兼容问题？"><a href="#现在开发如何解决浏览器兼容问题？" class="headerlink" title="现在开发如何解决浏览器兼容问题？"></a>现在开发如何解决浏览器兼容问题？</h3><ul>
+<li><strong>样式兼容性（css）方面</strong>,通过 Normalize.css 抹平差异</li>
+<li>利用webpack或者其它工具，给CSS添加浏览器前缀</li>
+<li>交互兼容性（javascript，exp: 事件兼容的问题、new Date()构造函数使用、获取 scrollTop 通过 document.documentElement.scrollTop 兼容非chrome浏览器<br><a target="_blank" rel="noopener" href="https://juejin.im/post/5b3da006e51d4518f140edb2">相关链接</a>  </li>
+</ul>
+<h3 id="前端如何指定浏览器使用最新内核"><a href="#前端如何指定浏览器使用最新内核" class="headerlink" title="前端如何指定浏览器使用最新内核?"></a>前端如何指定浏览器使用最新内核?</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;renderer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;webkit&quot;</span>/&gt;</span> // 强制Chromium内核，作用于360浏览器、QQ浏览器等国产双核浏览器</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;force-rendering&quot;</span> <span class="attr">content</span>=<span class="string">&quot;webkit&quot;</span>/&gt;</span> // 强制Chromium内核，作用于其他双核浏览器</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=Edge,chrome=1&quot;</span>/&gt;</span> // 如果有安装 Google Chrome Frame 插件则强制为Chromium内核，否则强制本机支持的最高版本IE内核，作用于IE浏览器</span><br></pre></td></tr></table></figure>
+
+
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>2019年我总结的面试题</p><p><a href="http://example.com/2019/05/11/Web/2019年我总结的面试题/">http://example.com/2019/05/11/Web/2019年我总结的面试题/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>聪明的竹子</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2019-05-11</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-07-10</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/07/22/Mini/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B7%A8%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">微信小程序跨页面通信解决思路 (转载)</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2018/12/13/Vue/vue%E9%A1%B9%E7%9B%AE%E6%8E%A5%E5%85%A5%E5%BE%AE%E4%BF%A1JSSDK%E7%9A%84%E5%9D%91/"><span class="level-item">vue项目接入微信JSSDK的坑</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "ce0fc004645c70a87016e7af763f20ea",
+            repo: "cleverbamboo.github.io",
+            owner: "CleverBamboo",
+            clientID: "11fad00a47acd0be0148",
+            clientSecret: "1850b675a1b6b8afcffd7a2551a31697a4b99113",
+            admin: ["CleverBamboo"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9ku3pe2uzj30go0go0to.jpg" alt="Alfred"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Alfred</p><p class="is-size-6 is-block">会写注释的开发</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>试玉要烧三日满，辨材须待七年期</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">74</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">17</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/CleverBamboo"><i class="fab fa-github"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#说一下Promise"><span class="level-left"><span class="level-item">1</span><span class="level-item">说一下Promise</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Promise是什么？"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">Promise是什么？</span></span></a></li><li><a class="level is-mobile" href="#Promise怎么用？"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">Promise怎么用？</span></span></a></li><li><a class="level is-mobile" href="#Promise原理"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">Promise原理</span></span></a></li></ul></li><li><a class="level is-mobile" href="#跨域"><span class="level-left"><span class="level-item">2</span><span class="level-item">跨域</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#什么是跨域"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">什么是跨域</span></span></a></li><li><a class="level is-mobile" href="#同源策略"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">同源策略</span></span></a></li><li><a class="level is-mobile" href="#为什么"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">为什么</span></span></a></li><li><a class="level is-mobile" href="#跨域的解决方案"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">跨域的解决方案</span></span></a></li><li><a class="level is-mobile" href="#jsonp原理"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">jsonp原理</span></span></a></li></ul></li><li><a class="level is-mobile" href="#如何进行网站性能优化"><span class="level-left"><span class="level-item">3</span><span class="level-item">如何进行网站性能优化</span></span></a></li><li><a class="level is-mobile" href="#从浏览器地址栏输入url到显示页面的步骤-以HTTP为例"><span class="level-left"><span class="level-item">4</span><span class="level-item">从浏览器地址栏输入url到显示页面的步骤(以HTTP为例)</span></span></a></li><li><a class="level is-mobile" href="#移动端开发自适应页面如何做？"><span class="level-left"><span class="level-item">5</span><span class="level-item">移动端开发自适应页面如何做？</span></span></a></li><li><a class="level is-mobile" href="#rem原理"><span class="level-left"><span class="level-item">6</span><span class="level-item">rem原理</span></span></a></li><li><a class="level is-mobile" href="#说一下this。-相关链接"><span class="level-left"><span class="level-item">7</span><span class="level-item">说一下this。 相关链接</span></span></a></li><li><a class="level is-mobile" href="#箭头函数的特点"><span class="level-left"><span class="level-item">8</span><span class="level-item">箭头函数的特点?</span></span></a></li><li><a class="level is-mobile" href="#和-的区别？"><span class="level-left"><span class="level-item">9</span><span class="level-item">== 和 === 的区别？</span></span></a></li><li><a class="level is-mobile" href="#CSS选择器优先级"><span class="level-left"><span class="level-item">10</span><span class="level-item">CSS选择器优先级</span></span></a></li><li><a class="level is-mobile" href="#BFC"><span class="level-left"><span class="level-item">11</span><span class="level-item">BFC</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#什么是BFC"><span class="level-left"><span class="level-item">11.1</span><span class="level-item">什么是BFC</span></span></a></li><li><a class="level is-mobile" href="#BFC特性："><span class="level-left"><span class="level-item">11.2</span><span class="level-item">BFC特性：</span></span></a></li><li><a class="level is-mobile" href="#如何触发BFC"><span class="level-left"><span class="level-item">11.3</span><span class="level-item">如何触发BFC</span></span></a></li></ul></li><li><a class="level is-mobile" href="#EventBus如何实现？相关链接"><span class="level-left"><span class="level-item">12</span><span class="level-item">EventBus如何实现？相关链接</span></span></a></li><li><a class="level is-mobile" href="#Vue组件之间的通信"><span class="level-left"><span class="level-item">13</span><span class="level-item">Vue组件之间的通信</span></span></a></li><li><a class="level is-mobile" href="#Vue双向绑定的原理"><span class="level-left"><span class="level-item">14</span><span class="level-item">Vue双向绑定的原理</span></span></a></li><li><a class="level is-mobile" href="#Vue-Computed的实现原理和缓存原理"><span class="level-left"><span class="level-item">15</span><span class="level-item">Vue Computed的实现原理和缓存原理</span></span></a></li><li><a class="level is-mobile" href="#Vue-watch-和-computed的区别"><span class="level-left"><span class="level-item">16</span><span class="level-item">Vue watch 和 computed的区别</span></span></a></li><li><a class="level is-mobile" href="#MVVM框架是什么？它和其它框架（Jquery）的区别是什么？哪些场景适合？"><span class="level-left"><span class="level-item">17</span><span class="level-item">MVVM框架是什么？它和其它框架（Jquery）的区别是什么？哪些场景适合？</span></span></a></li><li><a class="level is-mobile" href="#Vue-mixin-的原理"><span class="level-left"><span class="level-item">18</span><span class="level-item">Vue mixin 的原理</span></span></a></li><li><a class="level is-mobile" href="#nextTick-实现原理"><span class="level-left"><span class="level-item">19</span><span class="level-item">nextTick 实现原理</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#宏任务-macro-task-和-微任务-micro-task"><span class="level-left"><span class="level-item">19.1</span><span class="level-item">宏任务(macro task) 和 微任务(micro task)</span></span></a></li></ul></li><li><a class="level is-mobile" href="#什么是虚拟-dom-？"><span class="level-left"><span class="level-item">20</span><span class="level-item">什么是虚拟 dom ？</span></span></a></li><li><a class="level is-mobile" href="#说一下Vuex"><span class="level-left"><span class="level-item">21</span><span class="level-item">说一下Vuex</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#vuex有哪几种属性？"><span class="level-left"><span class="level-item">21.1</span><span class="level-item">vuex有哪几种属性？</span></span></a></li><li><a class="level is-mobile" href="#vuex的state特性是？"><span class="level-left"><span class="level-item">21.2</span><span class="level-item">vuex的state特性是？</span></span></a></li><li><a class="level is-mobile" href="#vuex的getter特性是？"><span class="level-left"><span class="level-item">21.3</span><span class="level-item">vuex的getter特性是？</span></span></a></li><li><a class="level is-mobile" href="#vuex的mutation特性是？"><span class="level-left"><span class="level-item">21.4</span><span class="level-item">vuex的mutation特性是？</span></span></a></li><li><a class="level is-mobile" href="#不用vuex会带来什么问题？"><span class="level-left"><span class="level-item">21.5</span><span class="level-item">不用vuex会带来什么问题？</span></span></a></li></ul></li><li><a class="level is-mobile" href="#请详细说下你对vue生命周期的理解？"><span class="level-left"><span class="level-item">22</span><span class="level-item">请详细说下你对vue生命周期的理解？</span></span></a></li><li><a class="level is-mobile" href="#请说下封装-vue-组件的过程？"><span class="level-left"><span class="level-item">23</span><span class="level-item">请说下封装 vue 组件的过程？</span></span></a></li><li><a class="level is-mobile" href="#说一下keep-live组件的原理"><span class="level-left"><span class="level-item">24</span><span class="level-item">说一下keep-live组件的原理</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#keep-alive是什么"><span class="level-left"><span class="level-item">24.1</span><span class="level-item">keep-alive是什么</span></span></a></li><li><a class="level is-mobile" href="#keep-alive运行原理"><span class="level-left"><span class="level-item">24.2</span><span class="level-item">keep-alive运行原理</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Proxy-和-Object-defineProperty-的优劣？"><span class="level-left"><span class="level-item">25</span><span class="level-item">Proxy 和 Object.defineProperty 的优劣？</span></span></a></li><li><a class="level is-mobile" href="#聊一聊常见的浏览器端数据存储方案"><span class="level-left"><span class="level-item">26</span><span class="level-item">聊一聊常见的浏览器端数据存储方案</span></span></a></li><li><a class="level is-mobile" href="#Flexible布局方案的原理"><span class="level-left"><span class="level-item">27</span><span class="level-item">Flexible布局方案的原理</span></span></a></li><li><a class="level is-mobile" href="#为什么会有深拷贝和浅拷贝？日常开发中如何使用？，如何实现一个深拷贝？"><span class="level-left"><span class="level-item">28</span><span class="level-item">为什么会有深拷贝和浅拷贝？日常开发中如何使用？，如何实现一个深拷贝？</span></span></a></li><li><a class="level is-mobile" href="#后台管理系统权限路由实现"><span class="level-left"><span class="level-item">29</span><span class="level-item">后台管理系统权限路由实现?</span></span></a></li><li><a class="level is-mobile" href="#vue-组件-data-为什么必须是函数？"><span class="level-left"><span class="level-item">30</span><span class="level-item">vue 组件 data 为什么必须是函数？</span></span></a></li><li><a class="level is-mobile" href="#webpack-是什么？为什么使用webpack-WebPack和Grunt以及Gulp相比有什么特性"><span class="level-left"><span class="level-item">31</span><span class="level-item">webpack 是什么？为什么使用webpack? WebPack和Grunt以及Gulp相比有什么特性</span></span></a></li><li><a class="level is-mobile" href="#现在开发如何解决浏览器兼容问题？"><span class="level-left"><span class="level-item">32</span><span class="level-item">现在开发如何解决浏览器兼容问题？</span></span></a></li><li><a class="level is-mobile" href="#前端如何指定浏览器使用最新内核"><span class="level-left"><span class="level-item">33</span><span class="level-item">前端如何指定浏览器使用最新内核?</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Example/"><span class="level-start"><span class="level-item">Example</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/GO/"><span class="level-start"><span class="level-item">GO</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/JAVASCRIPT/"><span class="level-start"><span class="level-item">JAVASCRIPT</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/REACT/"><span class="level-start"><span class="level-item">REACT</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Vue/"><span class="level-start"><span class="level-item">Vue</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="level-start"><span class="level-item">小程序</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">数据结构和算法</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"><span class="level-start"><span class="level-item">计算机</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="level-start"><span class="level-item">计算机网络</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9A%8F%E5%BF%83%E6%89%80%E6%AC%B2/"><span class="level-start"><span class="level-item">随心所欲</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/07/08/GO/Go%E8%AF%AD%E8%A8%80Gin%E9%83%A8%E7%BD%B2Docker%E3%80%81Nginx%E3%80%81Supervisor%E3%80%81Redis%E3%80%81Mysql%E5%AE%8C%E6%95%B4%E8%AF%A6%E7%BB%86%E6%B5%81%E7%A8%8B/"><img src="https://z3.ax1x.com/2021/07/08/RL84gO.jpg" alt="Go语言Gin部署Docker、Nginx、Supervisor、Redis、Mysql完整详细流程"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-07-08T03:38:22.000Z">2021-07-08</time></p><p class="title"><a href="/2021/07/08/GO/Go%E8%AF%AD%E8%A8%80Gin%E9%83%A8%E7%BD%B2Docker%E3%80%81Nginx%E3%80%81Supervisor%E3%80%81Redis%E3%80%81Mysql%E5%AE%8C%E6%95%B4%E8%AF%A6%E7%BB%86%E6%B5%81%E7%A8%8B/">Go语言Gin部署Docker、Nginx、Supervisor、Redis、Mysql完整详细流程</a></p><p class="categories"><a href="/categories/GO/">GO</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/06/08/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E5%85%AD%EF%BC%89-%E7%BB%BC%E5%90%88%E7%AF%87%EF%BC%88%E7%88%B1%E7%A7%9F%E6%88%BF%E9%A1%B9%E7%9B%AE%EF%BC%89/"><img src="https://z3.ax1x.com/2021/04/27/g9kcmd.png" alt="微服务实战Go Micro v3 系列（六）- 综合篇（爱租房项目）"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-06-08T07:20:17.000Z">2021-06-08</time></p><p class="title"><a href="/2021/06/08/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E5%85%AD%EF%BC%89-%E7%BB%BC%E5%90%88%E7%AF%87%EF%BC%88%E7%88%B1%E7%A7%9F%E6%88%BF%E9%A1%B9%E7%9B%AE%EF%BC%89/">微服务实战Go Micro v3 系列（六）- 综合篇（爱租房项目）</a></p><p class="categories"><a href="/categories/GO/">GO</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/06/02/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89-%E6%B3%A8%E5%86%8C%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/"><img src="https://z3.ax1x.com/2021/04/27/g9kcmd.png" alt="微服务实战Go Micro v3 系列（五）- 注册和配置中心"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-06-02T08:53:44.000Z">2021-06-02</time></p><p class="title"><a href="/2021/06/02/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%94%EF%BC%89-%E6%B3%A8%E5%86%8C%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/">微服务实战Go Micro v3 系列（五）- 注册和配置中心</a></p><p class="categories"><a href="/categories/GO/">GO</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/05/12/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E5%9B%9B%EF%BC%89-%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8-Pub-Sub/"><img src="https://z3.ax1x.com/2021/04/27/g9kcmd.png" alt="微服务实战Go Micro v3 系列（四）- 事件驱动(Pub/Sub)"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-05-12T09:22:37.000Z">2021-05-12</time></p><p class="title"><a href="/2021/05/12/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E5%9B%9B%EF%BC%89-%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8-Pub-Sub/">微服务实战Go Micro v3 系列（四）- 事件驱动(Pub/Sub)</a></p><p class="categories"><a href="/categories/GO/">GO</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/04/28/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%89%EF%BC%89-%E5%90%AF%E5%8A%A8HTTP%E6%9C%8D%E5%8A%A1/"><img src="https://z3.ax1x.com/2021/04/27/g9kcmd.png" alt="微服务实战Go Micro v3 系列（三）-启动HTTP服务"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-04-28T03:14:46.000Z">2021-04-28</time></p><p class="title"><a href="/2021/04/28/GO/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98Go-Micro-v3-%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%89%EF%BC%89-%E5%90%AF%E5%8A%A8HTTP%E6%9C%8D%E5%8A%A1/">微服务实战Go Micro v3 系列（三）-启动HTTP服务</a></p><p class="categories"><a href="/categories/GO/">GO</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">July 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">June 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">May 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">April 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">March 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/02/"><span class="level-start"><span class="level-item">February 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/01/"><span class="level-start"><span class="level-item">January 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">December 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/08/"><span class="level-start"><span class="level-item">August 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">June 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">May 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">April 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">March 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/02/"><span class="level-start"><span class="level-item">February 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">January 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">December 2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/11/"><span class="level-start"><span class="level-item">November 2019</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/10/"><span class="level-start"><span class="level-item">October 2019</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/09/"><span class="level-start"><span class="level-item">September 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/08/"><span class="level-start"><span class="level-item">August 2019</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/07/"><span class="level-start"><span class="level-item">July 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/05/"><span class="level-start"><span class="level-item">May 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/12/"><span class="level-start"><span class="level-item">December 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/06/"><span class="level-start"><span class="level-item">June 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">May 2018</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/04/"><span class="level-start"><span class="level-item">April 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/03/"><span class="level-start"><span class="level-item">March 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/01/"><span class="level-start"><span class="level-item">January 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/08/"><span class="level-start"><span class="level-item">August 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/07/"><span class="level-start"><span class="level-item">July 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/1995/01/"><span class="level-start"><span class="level-item">January 1995</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Example/"><span class="tag">Example</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GO/"><span class="tag">GO</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/React/"><span class="tag">React</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vue/"><span class="tag">Vue</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%89%8D%E7%AB%AF/"><span class="tag">前端</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="tag">小程序</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B8%83%E5%B1%80/"><span class="tag">布局</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95/"><span class="tag">算法</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><span class="tag">网络安全</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"><span class="tag">计算机</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="tag">计算机网络</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9A%8F%E5%BF%83%E6%89%80%E6%AC%B2/"><span class="tag">随心所欲</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E8%AF%95/"><span class="tag">面试</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">Advertisement</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4136865331374316" data-ad-slot="pub-4136865331374316" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://i.loli.net/2019/12/05/7WUKpFrsMSxv9jB.png" alt="聪明的竹子博客" height="28"></a><p class="is-size-7"><span>&copy; 2021 聪明的竹子</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
